@@ -324,13 +324,14 @@ section{
   }
   /*Divisoria ------------------------------*/
   #Divisoria {
-    top: 94vh;
+    top: 77vh;
   }
   #Divisoria h3 {
     font-size: 4.5vw;
   }
   #BarraDivi {
     height: 1vw;
+    top: 83vh;
   }
 
   /*TELA CONTATO=======================================================*/
