@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --cor-preto: #010101;
+  --cor-branco: #ffffff;
+  --cor-cinza: #727272;
+  --cor-cinzaescuro: #1c1c1c;
+  --cor-cinzaclaro: #c0c0c0;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+body{
+  background: var(--cor-preto);
+  overflow-x: hidden;
+  font-family: 'Josefin Slab', serif;
+  color: var(--cor-branco);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+section{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 2;
+  scroll-snap-align: start;
+}
+/*FUNDO ============================================================*/
+.terra {
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background:  url('../img/Mapa2.png');
+  opacity: 0.15;
+  background-size: cover;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  animation: animate 200000s linear infinite;
+}
+.terra img{
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.terra:active img{
+  transform: scale(0.8);
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 10000000px 0;
+  }
+}
+/*============================================================*/
+/*TELA PRINCIPAL=======================================================*/
+#home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*SUB TITULO -----------*/
+#SubTitulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: loadSub 3s linear;
+  position: absolute;
+  top: 4vh;
+}
+#SubTitulo h2{
+  font-size: 3vw;
+  font-weight: 500;
+  margin: 0 2vw;
+  animation: loadSub 3s linear;
+  
+}
+@keyframes loadSub{
+  0%{
+    top: 50vh;
+    font-size: 5vw;
+  }
+  10%{
+    top: 50vh;
+    font-size: 5vw;
+  }
+  100%{
+    top: 4vh;
+    font-size: 3vw;
+  }
+}
+.traço{
+  height: 0.3vh;
+  width: 4vw;
+  background-color: var(--cor-branco);
+}
+/*-------------------*/
+
+/*TITULO -------------------*/
+#Titulo{
+  font-weight: 800;
+  font-size: 7vw;
+  margin-bottom: 5vh;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.2));
+  opacity: 1;
+  animation: LoadTit  4s linear;
+}
+@keyframes LoadTit{
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/*-------------------*/
+
+/*TEXTO -------------------*/
+#Texto{
+  width: 50vw;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5vw;
+  margin-top: 2vh;
+  animation: LoadTit  4s linear;
+}
+/*-------------------*/
+
+/*INFOS -------------------*/
+#Infos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  animation: LoadTit  4s linear;
+}
+#Infos p{
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+#barra{
+  background-color: var(--cor-branco);
+  width: 0.2vw;
+  height: 7vh;
+  margin: 0 4vw;
+}
+#Endereco{
+  font-size: 1.7vw;
+  text-align: center;
+  margin-top: 5vh;
+  animation: LoadTit  4s linear;
+}
+
+/*-------------------*/
+
+/*DIVISORIA -------------------*/
+#LinkDivi{
+  display: flex;
+  justify-content: center;
+}
+#Divisoria{
+  background-color: var(--cor-branco);
+  padding: 2vh 5vw;
+  border-radius: 1.5vw 1.5vw 0 0;
+  position: absolute;
+  top: 92vh;
+  animation: LoadTit  4s linear;
+}
+#Divisoria:hover{
+  background-color: var(--cor-cinzaclaro);
+}
+#Divisoria h3{
+  color: var(--cor-preto);
+  font-size: 2vw;
+  font-weight: 800;
+}
+#BarraDivi{
+  width: 100vw;
+  height: 0.2vw;
+  background-color: var(--cor-branco);
+  position: absolute;
+  top: 100vh;
+  animation: LoadTit  4s linear;
+}
+/*-------------------*/
+/*============================================================*/
+
+/*TELA CONTATO=======================================================*/
+#Contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+/*TITULO -------------------*/
+#TituloContato{
+  margin-top: 15vh;
+  font-size: 3vw;
+}
+/*-------------------*/
+
+/*TEXTO -------------------*/
+#Contato p{
+  font-size: 1.5vw;
+  margin-top: 4vh;
+  margin-bottom: 5vh;
+  width: 50vw;
+  text-align: center;
+}
+/*-------------------*/
+
+/*FORM -------------------*/
+#Forme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formes{
+  margin-top: 3vh;
+  width: 27vw;
+  height: 6vh;
+  font-size: 1.5vw;
+  border-radius: 0.5vw;
+  padding-left: 1vw;
+  color: var(--cor-preto);
+  background-color:var(--cor-branco);
+  border: none;
+}
+.formes:focus-visible {
+  border: none;
+  outline: unset;
+}
+
+.Envi{
+  margin-top: 3vh;
+  height: 7vh;
+  width: 15vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  border-radius: 0.5vw;
+  color: var(--cor-preto);
+  background-color:var(--cor-branco);
+}
+
+.Envi:hover{
+  background-color: var(--cor-cinzaclaro);
+}
+/*-------------------*/
+
+
+/* MOBILE =======================================================*/
+
+@media screen and (max-width: 1000px){
+
+  /*TELA PRINCIPAL=======================================================*/
+  /*SUbtitulo ------------------------------*/
+  #SubTitulo h2 {
+    font-size: 7vw;
+    font-weight: 800;
+    animation: loadSub 3s linear;
+  }
+
+  @keyframes loadSub{
+    0%{
+      top: 50vh;
+      font-size: 12vw;
+    }
+    10%{
+      top: 50vh;
+      font-size: 12vw;
+    }
+    100%{
+      top: 4vh;
+      font-size: 7vw;
+    }
+  }
+
+  /*Titulo ------------------------------*/
+  #Titulo{
+    font-size: 12vw;
+    margin-bottom: 3vh;
+  }
+  /*Texto ------------------------------*/
+  #Texto {
+    width: 85vw;
+    font-weight: 400;
+    font-size: 4.5vw;
+    margin-top: 0vh;
+  }
+  /*Infos ------------------------------*/
+  #Infos {
+    margin-top: 7vh;
+  }
+  #Infos p {
+    font-size: 6.5vw;
+  }
+  #barra {
+    width: 0.4vw;
+  }
+  #Endereco {
+    font-size: 4vw;
+    width: 80vw;
+  }
+  /*Divisoria ------------------------------*/
+  #Divisoria {
+    top: 94vh;
+  }
+  #Divisoria h3 {
+    font-size: 4.5vw;
+  }
+  #BarraDivi {
+    height: 1vw;
+  }
+
+  /*TELA CONTATO=======================================================*/
+
+  /*Titulo ------------------------------*/
+  #TituloContato {
+    margin-top: 10vh;
+    font-size: 8vw;
+  }
+  /*Texto ------------------------------*/
+  #Contato p {
+    font-size: 4.5vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+  }
+  /*Forme ------------------------------*/
+  .formes {
+    margin-top: 3vh;
+    width: 75vw;
+    height: 4.5vh;
+    font-size: 3.5vw;
+    border-radius: 2.5vw;
+  }
+
+  .Envi {
+    margin-top: 4vh;
+    height: 6vh;
+    width: 40vw;
+    font-size: 3.5vw;
+    font-weight: 600;
+    border-radius: 2.5vw;
+  }
+}
