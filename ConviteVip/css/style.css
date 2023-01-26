@@ -278,7 +278,7 @@ section{
   #SubTitulo h2 {
     font-size: 7vw;
     font-weight: 800;
-    animation: loadSub 3s linear;
+    animation: loadSub 2s linear;
   }
 
   @keyframes loadSub{
