@@ -300,6 +300,7 @@ section{
   #Titulo{
     font-size: 12vw;
     margin-bottom: 3vh;
+    margin-top: 1vh;
   }
   /*Texto ------------------------------*/
   #Texto {
@@ -324,14 +325,14 @@ section{
   }
   /*Divisoria ------------------------------*/
   #Divisoria {
-    top: 77vh;
+    top: 79vh;
   }
   #Divisoria h3 {
     font-size: 4.5vw;
   }
   #BarraDivi {
     height: 1vw;
-    top: 83vh;
+    top: 85vh;
   }
 
   /*TELA CONTATO=======================================================*/
