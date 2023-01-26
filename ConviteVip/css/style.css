@@ -284,11 +284,11 @@ section{
   @keyframes loadSub{
     0%{
       top: 50vh;
-      font-size: 12vw;
+      font-size: 10vw;
     }
     10%{
       top: 50vh;
-      font-size: 12vw;
+      font-size: 10vw;
     }
     100%{
       top: 4vh;
